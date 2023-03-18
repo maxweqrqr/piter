@@ -198,11 +198,10 @@
                 </span>
             </div>
             <div id="textInner" class="py-8 px-9"> /
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nisi omnis voluptatum saepe voluptas modi incidunt ut sint blanditiis aliquid.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
+                
             </div>
-            <div class="py-1 px-4 bg-white text-black"> 
-                <h3>popup Footer</h3>
+            <div id="popupFooter" class="py-1 px-4 bg-white text-black"> 
+                
             </div>
         </div>
     </div>
@@ -455,23 +454,31 @@
         }
     }
     const ren=document.getElementsByClassName("artur");
-    const textHtml=document.getElementById("textInner")
     const mas=[
         "1lorermdkfmdfmfdfmsfmmdf",
         "2loremfdsfsrrwqwwwwwwwwww",
-        "3loremfdsfsrrwqwwwwwwwww"
+        "3loremfdsfsrrwqwwwwwwwww",
+        "4loremfdsfsrrwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqwqw",
+    ];
+
+    const footerText = [
+        'footer1',
+        'footer2',
+        'footer3',
+        'footer4',
+        'footer5',
+        'footer6',
     ]
 
-    for (let i;i<ren.length;i++){
-        ren[i].onclick=function(i){
-            popup.style.display="block";
-            textHtml.innerHTML=mas[i];
-            
-                
-            
-
+    window.onload = () => {
+        for(let i = 0; i < ren.length; i++){
+            ren[i].onclick = () => {
+                popup.style.display = "block";
+                document.getElementById("textInner").innerHTML = mas[i];
+                document.getElementById('popupFooter').innerHTML = footerText[i];
+            };
         }
-    }
+    };
 </script>    
 </body>
 
